@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>For Kanak 💖</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Kanak 💖</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,38 +15,35 @@ justify-content:center;
 align-items:center;
 overflow:hidden;
 background:radial-gradient(circle at top,#2b5876,#0f2027);
+font-family:Segoe UI;
 color:#fff;
-font-family:'Segoe UI','Georgia','serif';
 }
 
-/* ❤️ HEARTS ON TOP */
+/* Floating Hearts */
 .heart{
 position:absolute;
 bottom:-60px;
-font-size:70px;
-opacity:.75;
+font-size:60px;
+opacity:.7;
 animation:floatUp linear infinite;
-filter:drop-shadow(0 0 10px rgba(255,255,255,.4));
 z-index:9999;
 pointer-events:none;
 }
 @keyframes floatUp{
-to{transform:translateY(-130vh);opacity:0}
+to{transform:translateY(-120vh);opacity:0}
 }
 
-/* 📦 PAGES */
+/* Pages */
 .page{
 display:none;
 width:90%;
 max-width:360px;
-padding:26px;
-border-radius:26px;
+padding:25px;
+border-radius:25px;
 background:rgba(255,255,255,0.12);
-backdrop-filter:blur(14px);
-box-shadow:0 40px 120px rgba(0,0,0,.7);
+backdrop-filter:blur(15px);
+box-shadow:0 30px 100px rgba(0,0,0,.7);
 text-align:center;
-position:relative;
-z-index:10;
 }
 .page.active{display:block}
 
@@ -58,28 +55,26 @@ border-radius:30px;
 background:linear-gradient(135deg,#ff758c,#ff7eb3);
 color:#fff;
 font-size:15px;
-cursor:pointer;
 }
 
-/* 📜 LETTER */
+/* Letter */
 .letter{
 background:linear-gradient(#f7e7c6,#ecd19a);
 color:#4b2e1f;
-padding:22px;
+padding:20px;
 border-radius:18px;
-border:2px solid #c9a24d;
-line-height:2;
-font-size:16px;
+line-height:1.8;
 }
 
-/* 📸 PHOTO */
+/* Photos */
 .photo{
-width:190px;height:190px;
+width:190px;
+height:190px;
 margin:20px auto;
 border-radius:50%;
 overflow:hidden;
 border:4px solid #fff;
-box-shadow:0 0 35px rgba(255,255,255,.6);
+box-shadow:0 0 30px #fff;
 }
 .photo img{
 width:100%;
@@ -87,62 +82,38 @@ height:100%;
 object-fit:cover;
 }
 
-/* 🎂 ROYAL CAKE PAGE */
-
-.cake-scene{
-padding:20px;
-animation:glowBg 4s infinite alternate;
-}
-
-@keyframes glowBg{
-from{filter:brightness(1);}
-to{filter:brightness(1.2);}
-}
-
-.wish-text{
-font-size:22px;
-margin-bottom:20px;
-text-shadow:0 0 10px #ff9a9e;
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.05);}
-100%{transform:scale(1);}
-}
-
-.cake{
+/* ===== ROYAL CAKE ===== */
+.royal-cake{
 position:relative;
 width:200px;
 margin:40px auto;
 }
 
-.layer{
+.rc-layer{
 height:45px;
 border-radius:14px;
 margin:0 auto;
 box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
-.layer-bottom{
+.rc-bottom{
 width:200px;
 background:linear-gradient(135deg,#ff4e50,#f9d423);
 }
 
-.layer-middle{
+.rc-middle{
 width:160px;
 background:linear-gradient(135deg,#ff9a9e,#fecfef);
 margin-top:-12px;
 }
 
-.layer-top{
+.rc-top{
 width:120px;
 background:linear-gradient(135deg,#a18cd1,#fbc2eb);
 margin-top:-12px;
 }
 
-.icing{
+.rc-icing{
 width:130px;
 height:25px;
 background:#fff;
@@ -151,20 +122,19 @@ position:absolute;
 top:-12px;
 left:50%;
 transform:translateX(-50%);
-box-shadow:0 5px 15px rgba(0,0,0,.3);
 }
 
-.cake-text{
+.rc-text{
 position:absolute;
 top:25px;
 width:100%;
-font-size:13px;
+font-size:14px;
 font-weight:bold;
 color:#fff;
 text-shadow:0 0 10px #000;
 }
 
-.candle{
+.rc-candle{
 position:absolute;
 top:-40px;
 left:50%;
@@ -175,14 +145,14 @@ background:#fff;
 border-radius:4px;
 }
 
-.flame{
+.rc-flame{
 position:absolute;
 top:-18px;
 left:50%;
 transform:translateX(-50%);
 width:16px;
 height:16px;
-background:radial-gradient(circle, yellow 0%, orange 60%, red 100%);
+background:radial-gradient(circle,yellow 0%,orange 60%,red 100%);
 border-radius:50%;
 box-shadow:0 0 20px orange;
 animation:flicker .3s infinite alternate;
@@ -193,11 +163,6 @@ from{transform:translateX(-50%) scale(1);}
 to{transform:translateX(-50%) scale(1.3);}
 }
 
-.hint{
-margin-top:20px;
-font-size:13px;
-opacity:.8;
-}
 </style>
 </head>
 
@@ -212,46 +177,60 @@ opacity:.8;
 <!-- PAGE 2 -->
 <div class="page" id="p2">
 <div class="letter">
-“Ek baat bolu…”<br><br>
+“Ek baat bolu…” 💌<br><br>
+
 Mujhe ye nahi chahiye ki sab log mujhe pyaar kare,<br>
 mere dil ki baat samjhe,<br>
 meri care kare aur mere saath rahe.<br><br>
-I just need one person,<br>
+
+"I Just Need A One Person"<br>
 jo mujhse pyaar kare,<br>
 mere dil ki baat samjhe,<br>
 aur mere saath humesha rahe.<br><br>
-Aur wo <b>AAP</b> ho… 🤍<br><br>
-Aur haan baby,<br>
-AAP ki smile hi kaafi hoti hai<br>
-meri har tension bhula dene ke liye…<br><br>
-HAPPY BIRTHDAY BABYYYYYYYYYYYYYY💖🫶🏼🌙✨<br>
+
+Aur wo <b>AAP</b> ho… 🤍<br>
+AAP hi ho jiski wajah se hum<br>
+humesha khush reh pate hai…<br><br>
+
+Aur haan baby… 💖<br>
+AAP jab halki si smile kar dete ho na,<br>
+toh sab kuch thoda sa theek lagne lagta hai.<br><br>
+
+Bas aise hi rehna…<br>
+soft, simple, apne se.<br><br>
+
+Stay With Me Forever,<br>
+You're The Reason Of My Happiness…!! 💞✨<br><br>
+
+Happy Birthday 🌙✨<br>
 Aapki saari wishes poori ho 💖🫶🏼
+
+</div>
+
+<button onclick="go(3)">Next</button>
 </div>
 <button onclick="go(3)">Next</button>
 </div>
 
-<!-- PAGE 3 -->
+<!-- PAGE 3 CAKE -->
 <div class="page" id="p3">
-<div class="cake-scene">
-<h2 class="wish-text">Make A Wish ✨</h2>
+<h2>Make A Wish ✨</h2>
 
-<div class="cake">
-<div class="layer layer-bottom"></div>
-<div class="layer layer-middle"></div>
-<div class="layer layer-top"></div>
-<div class="icing"></div>
-<div class="cake-text">Happy Birthday Kanak 💖</div>
-<div class="candle">
-<div class="flame" id="flame"></div>
+<div class="royal-cake">
+<div class="rc-layer rc-bottom"></div>
+<div class="rc-layer rc-middle"></div>
+<div class="rc-layer rc-top"></div>
+<div class="rc-icing"></div>
+<div class="rc-text">Happy Birthday Kanak 💖</div>
+<div class="rc-candle">
+<div class="rc-flame" id="flame"></div>
 </div>
 </div>
 
-<p class="hint">(Phone shake to blow the candle 🎂)</p>
-</div>
 <button onclick="go(4)">Next</button>
 </div>
 
-<!-- PAGE 4 -->
+<!-- PAGE 4 PHOTOS -->
 <div class="page" id="p4">
 <h3>Some moments 📸</h3>
 <div class="photo">
@@ -260,61 +239,40 @@ Aapki saari wishes poori ho 💖🫶🏼
 <button onclick="go(5)">Next</button>
 </div>
 
-<!-- PAGE 5 -->
+<!-- PAGE 5 GIFT -->
 <div class="page" id="p5">
-<h3>Your gift 🎁</h3>
-<div class="gift" onclick="openGift()">🎁</div>
+<h3>Your Gift 🎁</h3>
+<div onclick="openGift()" style="font-size:60px;cursor:pointer;">🎁</div>
 <div id="giftOut"></div>
 </div>
 
-<audio id="music" src="song1.mp3" loop></audio>
+<audio id="music" src="song1.mp3"></audio>
 
 <script>
 
-/* ❤️ FLOATING HEARTS */
+/* Hearts */
 setInterval(()=>{
 const h=document.createElement("div");
 h.className="heart";
 h.innerHTML=["🤍","💗","❤️"][Math.floor(Math.random()*3)];
 h.style.left=Math.random()*100+"vw";
-h.style.fontSize=(Math.random()*40+50)+"px";
+h.style.fontSize=(Math.random()*40+40)+"px";
 h.style.animationDuration=(Math.random()*6+10)+"s";
 document.body.appendChild(h);
-setTimeout(()=>h.remove(),16000);
+setTimeout(()=>h.remove(),15000);
 },600);
 
-/* 🎵 MUSIC */
+/* Music */
 const music=document.getElementById("music");
 let started=false;
 
-/* 📸 PHOTOS */
-const photos=["photo1.jpg","photo2.jpg"];
-let idx=0,interval=null;
-function startPhotos(){
-const img=document.getElementById("slide");
-img.src=photos[0];
-if(interval)clearInterval(interval);
-interval=setInterval(()=>{
-idx=(idx+1)%photos.length;
-img.src=photos[idx];
-},3000);
-}
-
-/* 🎁 GIFT */
-function openGift(){
-document.getElementById("giftOut").innerHTML=
-"<div style='font-size:42px'>🧸</div>"+
-"<div style='font-size:42px'>🌹</div>"+
-"<div style='font-size:20px'>Happy Birthday Kanak 💖</div>";
-}
-
-/* 🔄 NAVIGATION */
+/* Navigation */
 function go(n){
 document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
 document.getElementById("p"+n).classList.add("active");
 
 if(!started){
-music.currentTime=49;   // 🎵 49 sec se start
+music.currentTime=49;   // 🎵 49 sec start
 music.play().catch(()=>{});
 started=true;
 }
@@ -322,7 +280,26 @@ started=true;
 if(n===4) startPhotos();
 }
 
-/* 🎂 SHAKE CANDLE + CINEMATIC EFFECT */
+/* Photos */
+const photos=["photo1.jpg","photo2.jpg"];
+let idx=0;
+function startPhotos(){
+const img=document.getElementById("slide");
+setInterval(()=>{
+idx=(idx+1)%photos.length;
+img.src=photos[idx];
+},3000);
+}
+
+/* Gift */
+function openGift(){
+document.getElementById("giftOut").innerHTML=
+"<div style='font-size:40px'>🧸</div>"+
+"<div style='font-size:40px'>🌹</div>"+
+"<div>Happy Birthday Kanak 💖</div>";
+}
+
+/* Confetti + Shake */
 let lx,ly,lz;
 window.addEventListener("devicemotion",e=>{
 let a=e.accelerationIncludingGravity;
@@ -332,28 +309,22 @@ let d=Math.abs(a.x-lx)+Math.abs(a.y-ly)+Math.abs(a.z-lz);
 
 if(d>20){
 const flame=document.getElementById("flame");
-if(flame && flame.style.display!=="none"){
-flame.style.display="none";
+if(flame) flame.style.display="none";
 createConfetti();
-screenGlow();
-cakeZoom();
-}
 }
 
 lx=a.x;ly=a.y;lz=a.z;
 });
 
-/* 🎉 CONFETTI */
 function createConfetti(){
-for(let i=0;i<50;i++){
+for(let i=0;i<40;i++){
 let c=document.createElement("div");
 c.style.position="absolute";
-c.style.width="10px";
-c.style.height="10px";
-c.style.background=["#ff4e50","#f9d423","#a18cd1","#ff9a9e","#00f5d4"][Math.floor(Math.random()*5)];
+c.style.width="8px";
+c.style.height="8px";
+c.style.background=["#ff4e50","#f9d423","#a18cd1","#ff9a9e"][Math.floor(Math.random()*4)];
 c.style.left=Math.random()*100+"vw";
 c.style.top="0";
-c.style.zIndex="9999";
 c.style.borderRadius="50%";
 c.style.animation="fall 3s linear forwards";
 document.body.appendChild(c);
@@ -361,26 +332,6 @@ setTimeout(()=>c.remove(),3000);
 }
 }
 
-/* 💫 SCREEN GLOW */
-function screenGlow(){
-document.body.style.boxShadow="inset 0 0 200px rgba(255,255,255,0.6)";
-setTimeout(()=>{
-document.body.style.boxShadow="none";
-},800);
-}
-
-/* 🎂 CAKE ZOOM */
-function cakeZoom(){
-const cake=document.querySelector(".cake");
-if(!cake)return;
-cake.style.transition="transform .6s";
-cake.style.transform="scale(1.1)";
-setTimeout(()=>{
-cake.style.transform="scale(1)";
-},800);
-}
-
-/* 🎉 FALL ANIMATION */
 const style=document.createElement("style");
 style.innerHTML="@keyframes fall{to{transform:translateY(100vh);opacity:0;}}";
 document.head.appendChild(style);
