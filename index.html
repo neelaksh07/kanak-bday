@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Kanak 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:radial-gradient(circle at top,#2b5876,#0f2027);
+color:#fff;
+font-family:'Segoe UI','Georgia','serif';
+}
+
+/* ❤️ FLOATING HEARTS — SABKE UPAR */
+.heart{
+position:absolute;
+bottom:-60px;
+font-size:70px;
+opacity:.75;
+animation:floatUp linear infinite;
+filter:drop-shadow(0 0 10px rgba(255,255,255,.4));
+z-index:9999;              /* 🔥 ON TOP */
+pointer-events:none;       /* clicks pass through */
+}
+@keyframes floatUp{
+to{transform:translateY(-130vh);opacity:0}
+}
+
+/* 📦 STORY PAGES */
+.page{
+display:none;
+width:90%;
+max-width:360px;
+padding:26px;
+border-radius:26px;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(14px);
+box-shadow:0 40px 120px rgba(0,0,0,.7);
+text-align:center;
+animation:fadeIn .9s ease;
+position:relative;
+z-index:10;                /* content layer */
+}
+.page.active{display:block}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px)}
+to{opacity:1}
+}
+
+button{
+margin-top:20px;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:#fff;
+font-size:15px;
+cursor:pointer;
+}
+
+/* 📜 LETTER */
+.letter{
+background:linear-gradient(#f7e7c6,#ecd19a);
+color:#4b2e1f;
+padding:22px;
+border-radius:18px;
+border:2px solid #c9a24d;
+box-shadow: inset 0 0 30px rgba(0,0,0,.25),
+            0 15px 40px rgba(0,0,0,.5);
+line-height:2;
+font-size:16px;
+letter-spacing:.4px;
+}
+
+/* 🎂 CAKE */
+.cake{
+margin:20px auto;
+width:140px;height:95px;
+background:#ff8fab;
+border-radius:16px;
+position:relative;
+}
+.cake::before{
+content:"";
+position:absolute;
+top:-26px;left:50%;
+transform:translateX(-50%);
+width:10px;height:26px;
+background:#fff;border-radius:4px;
+}
+.flame{
+position:absolute;
+top:-42px;left:50%;
+transform:translateX(-50%);
+width:16px;height:16px;
+background:orange;
+border-radius:50%;
+box-shadow:0 0 20px orange;
+animation:flicker .25s infinite alternate;
+}
+@keyframes flicker{
+to{transform:translateX(-50%) scale(1.3)}
+}
+.hidden{display:none}
+
+/* 📸 PHOTOS */
+.photo{
+width:190px;height:190px;
+margin:20px auto;
+border-radius:50%;
+overflow:hidden;
+border:4px solid rgba(255,255,255,.9);
+box-shadow:0 0 35px rgba(255,255,255,.6);
+background:#000;
+}
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:opacity 1s;
+}
+
+/* 🎁 GIFT */
+.gift{
+font-size:56px;
+margin:20px auto;
+cursor:pointer;
+}
+.giftOut div{
+font-size:42px;
+margin-top:10px;
+opacity:0;
+animation:pop .8s forwards;
+}
+.giftOut .rose{animation-delay:.8s}
+.giftOut .text{
+font-size:20px;
+background:linear-gradient(135deg,#ffd700,#ff9f43);
+-webkit-background-clip:text;
+color:transparent;
+animation-delay:1.6s;
+}
+.giftOut .secret{
+font-size:14px;
+animation-delay:2.6s;
+}
+@keyframes pop{
+to{opacity:1;transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h3>Ek chhoti si kahani… 🌙</h3>
+  <p>Jo sirf AAP ke liye hai.</p>
+  <button onclick="go(2)">Next</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <div class="letter">
+    “Ek baat bolu…”<br><br>
+    Mujhe ye nahi chahiye ki sab log mujhe pyaar kare,<br>
+    mere dil ki baat samjhe,<br>
+    meri care kare aur mere saath rahe.<br><br>
+    I just need one person,<br>
+    jo mujhse pyaar kare,<br>
+    mere dil ki baat samjhe,<br>
+    aur mere saath humesha rahe.<br><br>
+    Aur wo <b>AAP</b> ho… 🤍<br><br>
+    Aur haan baby,<br>
+    AAP ki smile hi kaafi hoti hai<br>
+    meri har tension bhula dene ke liye…<br><br>
+    HAPPY BIRTHDAY BABYYYYYYYYYYYYYY💖🫶🏼🌙✨
+    Aapki saari wishes poori ho 💖🫶🏼
+  </div>
+  <button onclick="go(3)">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h3>Make a wish 🎂</h3>
+  <div class="cake"><div class="flame" id="flame"></div></div>
+  <p>(Phone shake → candle blow)</p>
+  <button onclick="go(4)">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h3>Some moments 📸</h3>
+  <div class="photo">
+    <img id="slide" src="photo1.jpg">
+  </div>
+  <button onclick="go(5)">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h3>Your gift 🎁</h3>
+  <div class="gift" onclick="openGift()">🎁</div>
+  <div class="giftOut" id="giftOut"></div>
+</div>
+
+<audio id="music" src="song.mp3" loop></audio>
+
+<script>
+/* ❤️ HEARTS ON TOP */
+setInterval(()=>{
+ const h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML=["🤍","💗","❤️"][Math.floor(Math.random()*3)];
+ h.style.left=Math.random()*100+"vw";
+ h.style.fontSize=(Math.random()*40+50)+"px";
+ h.style.animationDuration=(Math.random()*6+10)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),16000);
+},600);
+
+/* MUSIC */
+const music=document.getElementById("music");
+let started=false;
+
+/* PHOTOS */
+const photos=["photo1.jpg","photo2.jpg"];
+let idx=0,interval=null;
+function startPhotos(){
+ const img=document.getElementById("slide");
+ img.src=photos[0];
+ if(interval)clearInterval(interval);
+ interval=setInterval(()=>{
+  idx=(idx+1)%photos.length;
+  img.style.opacity=0;
+  setTimeout(()=>{
+    img.src=photos[idx];
+    img.style.opacity=1;
+  },600);
+ },3000);
+}
+
+/* GIFT */
+function openGift(){
+ giftOut.innerHTML=
+ "<div>🧸</div>"+
+ "<div class='rose'>🌹</div>"+
+ "<div class='text'>Happy Birthday Kanak 💖</div>"+
+ "<div class='secret'>P.S. Ye kahani yahin khatam nahi hoti… 🤍</div>";
+}
+
+/* NAVIGATION */
+function go(n){
+ document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+ document.getElementById("p"+n).classList.add("active");
+ if(!started){
+  music.currentTime=30;
+  music.play();
+  started=true;
+ }
+ if(n===4) startPhotos();
+}
+
+/* SHAKE */
+let lx,ly,lz;
+window.addEventListener("devicemotion",e=>{
+ let a=e.accelerationIncludingGravity;
+ if(!a)return;
+ if(!lx){lx=a.x;ly=a.y;lz=a.z;return;}
+ let d=Math.abs(a.x-lx)+Math.abs(a.y-ly)+Math.abs(a.z-lz);
+ if(d>20) flame.classList.add("hidden");
+ lx=a.x;ly=a.y;lz=a.z;
+});
+</script>
+
+</body>
+</html>
